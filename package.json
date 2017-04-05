@@ -1,0 +1,24 @@
+{
+  "name": "pawscare_server",
+  "version": "1.0.0",
+  "description": "create the server side codes for the paws care app, connecting user and database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ray38/PAWSCare_Server.git"
+  },
+  "dependencies":{
+    "express":"*",
+    "body-parser":"*",
+    "mongoose":"*"
+  },
+  "author": "Xiangyun Lei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ray38/PAWSCare_Server/issues"
+  },
+  "homepage": "https://github.com/ray38/PAWSCare_Server#readme"
+}
