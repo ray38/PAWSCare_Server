@@ -14,5 +14,7 @@ var db = mongoose.connection;
 
 app.get('/',function(req, res){
 	res.send('Hello World!');
-
 });
+
+app.listen(9000);
+console.log('running on port 9000');
