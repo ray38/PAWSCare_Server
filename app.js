@@ -33,7 +33,7 @@ app.get('/api/users',function(req,res){
 
 app.post('/api/users',function(req,res){
 	var user = req.body;
-	Users.getUser(function(err,user){
+	Users.addUser(function(err,user){
 		if (err){
 			throw err;
 		}
