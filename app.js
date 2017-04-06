@@ -62,5 +62,16 @@ app.get('/api/pets/:_id',function(req,res){
 
 });
 
+app.post('/api/pets',function(req,res){
+	var pet = req.body;
+	Users.addPet(pet,function(err,pet){
+		if (err){
+			throw err;
+		}
+		res.json(pet);
+	});
+
+});
+
 app.listen(9000);
 console.log('running on port 9000');

@@ -40,3 +40,9 @@ module.exports.getPetById = function(id,callback){
 	Pets.findById(id,callback);
 
 }
+
+
+//Add pet
+module.exports.addPet = function(pet, callback){
+	Pets.create(pet, callback);
+}
