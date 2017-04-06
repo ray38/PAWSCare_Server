@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 Users = require('./models/Users');
-
+Pets  = require('./models/Pets');
 
 //connect to mongoDB
 mongoose.connect('mongodb://Ray38:`Kuyue5689740@ds147979.mlab.com:47979/accounts');
@@ -25,6 +25,27 @@ app.get('/api/users',function(req,res){
 			throw err;
 		}
 		res.json(users);
+	});
+
+});
+
+
+app.get('/api/pets',function(req,res){
+	Pets.getPets(function(err,pets){
+		if (err){
+			throw err;
+		}
+		res.json(pets);
+	});
+
+});
+
+app.get('/api/pets/:_id',function(req,res){
+	Pets.getPetsById(req.params._id,function(err,pet){
+		if (err){
+			throw err;
+		}
+		res.json(pet);
 	});
 
 });
