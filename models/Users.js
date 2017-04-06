@@ -29,5 +29,5 @@ module.exports.getUsers = function(callback, limit){
 
 //Add user
 module.exports.addUser = function(user, callback){
-	Users.find(callback).limit(limit);
+	Users.create(user, callback);
 }
