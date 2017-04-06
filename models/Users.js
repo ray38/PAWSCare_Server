@@ -42,3 +42,9 @@ module.exports.updateUser = function(id, user, options, callback){
 	}
 	Users.findOneAndUpdate(query,update,options, callback);
 }
+
+//Delete user
+module.exports.removeUser = function(id, callback){
+	var query = {_id : id};
+	Users.remove(query, callback);
+}

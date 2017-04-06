@@ -43,10 +43,23 @@ app.post('/api/users',function(req,res){
 
 });
 
+
+
 app.put('/api/users/:_id',function(req,res){
 	var id = req.params._id;
 	var user = req.body;
 	Users.updateUser(id,user,{},function(err,user){
+		if (err){
+			throw err;
+		}
+		res.json(user);
+	});
+
+});
+
+app.delete('/api/users/:_id',function(req,res){
+	var id = req.params._id;
+	Users.removeUser(id,function(err,user){
 		if (err){
 			throw err;
 		}
