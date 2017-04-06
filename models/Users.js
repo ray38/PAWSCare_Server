@@ -6,12 +6,12 @@ var usersSchema = mongoose.Schema({
 //		type String,
 //		required: true
 //	},
-	first_name: {
-		type String,
+	first_name:{
+		type: String,
 		required: true
 	},
-	last_name:  {
-		type String,
+	last_name:{
+		type: String,
 		required: true
 	},
 	create_data:{
