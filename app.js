@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-Users = require('./models/genre');
+Users = require('./models/Users');
 
 
 //connect to mongoDB
@@ -21,6 +21,9 @@ app.get('/',function(req, res){
 
 app.get('/api/users',function(req,res){
 	Users.getUsers(function(err,users){
+		if (err){
+			throw err;
+		}
 		res.json(users);
 	});
 
