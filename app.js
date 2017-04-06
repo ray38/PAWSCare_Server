@@ -3,6 +3,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+app.use(bodyParser.json());
+
 Users = require('./models/Users');
 Pets  = require('./models/Pets');
 
@@ -29,6 +31,16 @@ app.get('/api/users',function(req,res){
 
 });
 
+app.post('/api/users',function(req,res){
+	var user = req.body;
+	Users.getUser(function(err,user){
+		if (err){
+			throw err;
+		}
+		res.json(user);
+	});
+
+});
 
 app.get('/api/pets',function(req,res){
 	Pets.getPets(function(err,pets){
