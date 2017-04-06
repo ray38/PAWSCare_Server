@@ -64,7 +64,7 @@ app.get('/api/pets/:_id',function(req,res){
 
 app.post('/api/pets',function(req,res){
 	var pet = req.body;
-	Users.addPet(pet,function(err,pet){
+	Pets.addPet(pet,function(err,pet){
 		if (err){
 			throw err;
 		}
