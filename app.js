@@ -22,7 +22,7 @@ app.get('/',function(req, res){
 app.get('/api/users',function(req,res){
 	Users.getUsers(function(err,users){
 		if (err){
-			throw err;
+			//throw err;
 		}
 		res.json(users);
 	});
