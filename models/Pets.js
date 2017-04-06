@@ -20,7 +20,7 @@ var petsSchema = mongoose.Schema({
 	},
 	age:{
 		type: String
-	}
+	},
 	create_data:{
 		type: Date,
 		default: Date.now
