@@ -58,3 +58,10 @@ module.exports.updatePet = function(id, pet, options, callback){
 	}
 	Pets.findOneAndUpdate(query,update,options, callback);
 }
+
+
+//Delete pets
+module.exports.removePet = function(id, callback){
+	var query = {_id : id};
+	Pets.remove(query, callback);
+}

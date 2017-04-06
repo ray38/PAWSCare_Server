@@ -112,5 +112,17 @@ app.put('/api/pets/:_id',function(req,res){
 
 });
 
+app.delete('/api/pets/:_id',function(req,res){
+	var id = req.params._id;
+	Pets.removeUser(id,function(err,pet){
+		if (err){
+			throw err;
+		}
+		res.json(pet);
+	});
+
+});
+
+
 app.listen(9000);
 console.log('running on port 9000');
