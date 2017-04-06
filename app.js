@@ -53,7 +53,7 @@ app.get('/api/pets',function(req,res){
 });
 
 app.get('/api/pets/:_id',function(req,res){
-	Pets.getPetsById(req.params._id,function(err,pet){
+	Pets.getPetById(req.params._id,function(err,pet){
 		if (err){
 			throw err;
 		}
