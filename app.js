@@ -114,7 +114,7 @@ app.put('/api/pets/:_id',function(req,res){
 
 app.delete('/api/pets/:_id',function(req,res){
 	var id = req.params._id;
-	Pets.removeUser(id,function(err,pet){
+	Pets.removePet(id,function(err,pet){
 		if (err){
 			throw err;
 		}
