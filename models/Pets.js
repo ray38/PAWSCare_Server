@@ -46,3 +46,15 @@ module.exports.getPetById = function(id,callback){
 module.exports.addPet = function(pet, callback){
 	Pets.create(pet, callback);
 }
+
+//Update user
+module.exports.updatePet = function(id, pet, options, callback){
+	var query = {_id = id};
+	var update = {
+		pet_name:pet.pet_name,
+		species:pet.species,
+		owner:pet.owner,
+		age:pet.age
+	}
+	Pets.findOneAndUpdate(query,update,options, callback);
+}

@@ -42,6 +42,19 @@ app.post('/api/users',function(req,res){
 
 });
 
+app.put('/api/users/:_id',function(req,res){
+	var id = req.params._id;
+	var user = req.body;
+	Users.updateUser(id,user,{},function(err,user){
+		if (err){
+			throw err;
+		}
+		res.json(user);
+	});
+
+});
+
+
 app.get('/api/pets',function(req,res){
 	Pets.getPets(function(err,pets){
 		if (err){
@@ -65,6 +78,18 @@ app.get('/api/pets/:_id',function(req,res){
 app.post('/api/pets',function(req,res){
 	var pet = req.body;
 	Pets.addPet(pet,function(err,pet){
+		if (err){
+			throw err;
+		}
+		res.json(pet);
+	});
+
+});
+
+app.put('/api/pets/:_id',function(req,res){
+	var id = req.params._id;
+	var pet = req.body;
+	Pets.updatePet(id,pet,{},function(err,pet){
 		if (err){
 			throw err;
 		}
