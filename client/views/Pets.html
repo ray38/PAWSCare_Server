@@ -1,1 +1,21 @@
-TEST
+<div class="panel panel-default" ng-init="getPets()">
+  <div class="panel-heading">
+    <h3 class="panel-title">List of Pets</h3>
+  </div>
+  <div class="panel-body">
+  	<div class="row">
+  		<div ng-repeat="pet in list">
+  			<div class="col-md-6">
+  				<div class="col-md-6">
+  					{{pet.pet_name}}
+  					<p>{{pet.owner}}</p>
+  				</div>
+  				<div class="col-md-6">
+  					{{pet.species}}
+  					
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</div>
