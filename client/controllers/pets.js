@@ -14,6 +14,7 @@ PAWSCare.controller('PetsController', ['$scope', '$http', '$location', '$routePa
 		}
 		function errorCallback(error){
 		    //error code
+		    console.log("error http get");
 		}
 	}
 }]);
