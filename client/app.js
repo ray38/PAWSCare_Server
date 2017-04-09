@@ -1,6 +1,7 @@
 var PAWSCare = angular.module('PAWSCare',['ngRoute']);
 
-PAWSCare.config(function($routeProvider){
+PAWSCare.config(function($routeProvider, $locationProvider){
+	$locationProvider.hashPrefix('');
 	$routeProvider.when('/',{
 		controller:'PetsController',
 		templateUrl:'views/pets.html'
@@ -9,9 +10,9 @@ PAWSCare.config(function($routeProvider){
 		controller:'PetsController',
 		templateUrl:'views/pets.html'		
 	})
-	.when('/pets/details/:_id',{
+	.when('/pets/details/:id',{
 		controller:'PetsController',
-		templateUrl:'views/pets_details.html'
+		templateUrl:'views/pet_details.html'
 	})
 	.when('/pets/add',{
 		controller:'PetsController',

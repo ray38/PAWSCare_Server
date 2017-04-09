@@ -1,0 +1,18 @@
+<a class="btn btn-primary" href="#/pets">Go Back</a>
+<div class="panel panel-default" ng-init="getPet()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{pet.pet_name}}</h3>
+  </div>
+  <div class="panel-body">
+  	<div class="row">
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item">Owner: {{pet.owner}}</li>
+          <li class="list-group-item">Age: {{pet.age}}</li>
+          <li class="list-group-item">Species: {{pet.species}}</li>
+        </ul>
+        
+      </div>
+  	</div>
+  </div>
+</div>

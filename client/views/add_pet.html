@@ -1,0 +1,39 @@
+<a class="btn btn-primary" href="#/pets">Go Back</a>
+<div class="panel panel-default" ng-init="getPet()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add Pet</h3>
+  </div>
+  <div class="panel-body">
+  	<div class="row">
+      <form ng-submit="addPet()">
+        <div class="form-group">
+          <label>Pet name</label>
+          <input type="text" class="form-control" ng-model="pet.pet_name" placeholder="pet_name">
+        </div>
+        
+        <div class="form-group">
+          <label>Species</label>
+          <select ng-model="pet.species" class="form-control">
+            <option value="American Short">American Short</option>
+            <option value="American Mix">American Mix</option>
+            <option value="Sayam">Sayam</option>
+            <option value="Chinchilla">Chinchilla</option>
+            <option value="Himalaya Longhair">Himalaya Longhair</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Age</label>
+          <input type="text" class="form-control" ng-model="pet.age" placeholder="age">
+        </div>
+
+        <div class="form-group">
+          <label>Owner</label>
+          <input type="text" class="form-control" ng-model="pet.owner" placeholder="owner">
+        </div>
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+  	</div>
+  </div>
+</div>

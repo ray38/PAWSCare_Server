@@ -5,14 +5,15 @@
   <div class="panel-body">
   	<div class="row">
   		<div ng-repeat="pet in pets">
-  			<div class="col-md-6">
+  			<div class="col-md-12">
   				<div class="col-md-6">
-  					<h4>Name: {{pet.pet_name}}</h4>
+  					<h4>{{pet.pet_name}}</h4>
   					<p>Owner: {{pet.owner}}</p>
             <p>Age: {{pet.age}}</p>
+            <a class="btn btn-primary" href="#/pets/details/{{pet._id}}">View Details</a>
   				</div>
   				<div class="col-md-6">
-  					{{pet.species}}
+  					<p>{{pet.species}}</p>
   					
   				</div>
   			</div>
