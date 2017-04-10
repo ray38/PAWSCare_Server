@@ -1,5 +1,5 @@
 <a class="btn btn-primary" href="#/pets">Go Back</a>
-<div class="panel panel-default" ng-init="getPet()">
+<div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Add Pet</h3>
   </div>
@@ -8,7 +8,7 @@
       <form ng-submit="addPet()">
         <div class="form-group">
           <label>Pet name</label>
-          <input type="text" class="form-control" ng-model="pet.pet_name" placeholder="pet_name">
+          <input type="text" class="form-control" ng-model="pet.pet_name" placeholder="pet name">
         </div>
         
         <div class="form-group">

@@ -89,6 +89,8 @@ app.get('/api/pets/:_id',function(req,res){
 
 });
 
+
+
 app.post('/api/pets',function(req,res){
 	var pet = req.body;
 	Pets.addPet(pet,function(err,pet){
@@ -100,10 +102,14 @@ app.post('/api/pets',function(req,res){
 
 });
 
+
+
+
+
 app.put('/api/pets/:_id',function(req,res){
 	var id = req.params._id;
 	var pet = req.body;
-	Pets.updatePet(id,pet,{},function(err,pet){
+	Pets.updatePet(id,pet,{},function(err,user){
 		if (err){
 			throw err;
 		}
@@ -111,6 +117,7 @@ app.put('/api/pets/:_id',function(req,res){
 	});
 
 });
+
 
 app.delete('/api/pets/:_id',function(req,res){
 	var id = req.params._id;

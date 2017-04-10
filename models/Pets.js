@@ -19,7 +19,8 @@ var petsSchema = mongoose.Schema({
 		required: true
 	},
 	age:{
-		type: String
+		type: String,
+		required: true
 	},
 	create_data:{
 		type: Date,
@@ -46,6 +47,7 @@ module.exports.getPetById = function(id,callback){
 module.exports.addPet = function(pet, callback){
 	Pets.create(pet, callback);
 }
+
 
 //Update user
 module.exports.updatePet = function(id, pet, options, callback){
