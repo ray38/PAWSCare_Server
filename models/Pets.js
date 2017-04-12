@@ -2,15 +2,16 @@ var mongoose = require('mongoose');
 
 //Users Schema
 var petsSchema = mongoose.Schema({
-//	user_name: {
-//		type String,
-//		required: true
-//	},
+
 	pet_name:{
 		type: String,
 		required: true
 	},
 	species:{
+		type: String,
+		required: true
+	},
+	breed:{
 		type: String,
 		required: true
 	},

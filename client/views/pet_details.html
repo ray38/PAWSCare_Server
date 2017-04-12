@@ -7,9 +7,10 @@
   	<div class="row">
       <div class="col-md-8">
         <ul class="list-group">
-          <li class="list-group-item">Owner: {{pet.owner}}</li>
-          <li class="list-group-item">Age: {{pet.age}}</li>
           <li class="list-group-item">Species: {{pet.species}}</li>
+          <li class="list-group-item">Breed: {{pet.breed}}</li>
+          <li class="list-group-item">Age: {{pet.age}}</li>
+          
         </ul>
       </div>
   	</div>
@@ -17,6 +18,6 @@
 </div>
 
 <div class="pull-right">
-  <a href="#/pets/edit/{{pet._id}}">Edit</a> | <a href="#" id="deletebook">Delete</a>
+  <a href="#/pets/edit/{{pet._id}}">Edit</a> | <a href="#" ng-click="removePet(pet._id)">Delete</a>
   
 </div>
