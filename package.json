@@ -10,10 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/ray38/PAWSCare_Server.git"
   },
-  "dependencies":{
-    "express":"*",
-    "body-parser":"*",
-    "mongoose":"*"
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "*",
+    "express": "*",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "*",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1"
   },
   "author": "Xiangyun Lei",
   "license": "ISC",
