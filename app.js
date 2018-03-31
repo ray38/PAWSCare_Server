@@ -18,6 +18,8 @@ Pets  = require('./models/Pets');
 //connect to mongoDB
 //mongoose.connect('mongodb://Ray38:`Kuyue5689740@ds147979.mlab.com:47979/accounts');
 mongoose.connect(config.database)
+console.log("connect to database");
+console.log(mongoose.connection.readyState);
 var db = mongoose.connection;
 
 //express:
