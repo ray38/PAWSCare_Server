@@ -17,7 +17,15 @@ Pets  = require('./models/Pets');
 
 //connect to mongoDB
 //mongoose.connect('mongodb://Ray38:`Kuyue5689740@ds147979.mlab.com:47979/accounts');
-mongoose.connect(config.database)
+//mongoose.connect(config.database)
+mongoose.connect('mongodb://ds147979.mlab.com:47979/accounts', {
+    auth: {
+      user: 'Admin',
+      password: 'PAWSCareisNi$e'
+    }
+  })
+  .then(() => console.log('connection successful'))
+  .catch((err) => console.error(err));
 console.log("connect to database");
 console.log(mongoose.connection.readyState);
 var db = mongoose.connection;
