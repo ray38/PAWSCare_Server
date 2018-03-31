@@ -31,6 +31,7 @@ app.get('/',function(req, res){
 
 
 app.get('/api/users',function(req,res){
+	console.log('Request Type:', req.method)
 	Users.getUsers(function(err,users){
 		if (err){
 			throw err;
