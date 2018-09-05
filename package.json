@@ -11,14 +11,25 @@
     "url": "git+https://github.com/ray38/PAWSCare_Server.git"
   },
   "dependencies": {
-    "bcrypt": "^1.0.2",
     "body-parser": "*",
     "express": "*",
+    "express-messages": "*",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.1.2",
     "jwt-simple": "^0.5.1",
     "mongoose": "*",
     "morgan": "^1.8.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "*",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "http-errors": "~1.6.2",
+    "mongodb": "*",
+    "multer": "*",
     "passport": "^0.3.2",
-    "passport-jwt": "^2.2.1"
+    "passport-jwt": "^2.2.1",
+    "passport-http": "*",
+    "passport-local": "*"
   },
   "author": "Xiangyun Lei",
   "license": "ISC",
