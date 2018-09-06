@@ -92,7 +92,7 @@ router.post('/register',upload.single('profileimage'), function(req, res) {
 		if(err) throw err;
 		console.log(user);
 	});
-	return next();
+	res.redirect('/');
 /*
 	//Form Validator
 	req.checkBody('name','Name field is required').notEmpty();
@@ -138,7 +138,7 @@ router.post('/login',
 			console.log(user);
 		});
 		console.log("login complete")
-		//res.redirect('/');
+		res.redirect('/');
 });
 
 

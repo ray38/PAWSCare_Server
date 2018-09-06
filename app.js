@@ -108,8 +108,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(9000);
-console.log('running on port 9000');
+app.listen(3000);
+console.log('running on port 3000');
 
 
 module.exports = app;
